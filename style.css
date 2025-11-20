@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(190, 216, 212);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.game {
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 500px;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vmin;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(205, 211, 215);
+    font-size: 12vmin;
+    color: rgb(32, 129, 195);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+#reset-btn,
+#new-btn {
+    padding: 0.9rem 1.4rem;
+    font-size: 1.1rem;
+    background-color: rgb(36, 12, 12);
+    border: none;
+    border-radius: 1rem;
+    color: rgb(99, 210, 255);
+    margin-top: 1rem;
+}
+
+/* Messages */
+#msg,
+#draw-msg {
+    color: rgb(3, 70, 3);
+    font-size: 6vmin;
+}
+
+/* .msg-container,
+.draw-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+.draw-hide {
+    display: none !important;
+} */
+
+.msg-container,
+.draw-container {
+    display: flex;   /* <-- allow to appear */
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+.draw-hide {
+    display: none !important;
+}
+
+/* For small screens */
+@media (max-width: 420px) {
+    .game {
+        width: 85vmin;
+        height: 85vmin;
+        gap: 3vmin;
+    }
+
+    .box {
+        font-size: 14vmin;
+    }
+
+    #reset-btn,
+    #new-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    #msg,
+    #draw-msg {
+        font-size: 8vmin;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 600px) {
+    .game {
+        width: 70vmin;
+        height: 70vmin;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+    .game {
+        width: 50vmin;
+        height: 50vmin;
+    }
+
+    .box {
+        font-size: 8vmin;
+    }
+}
